@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.casadocodigo.cdi.builder.FuncionarioBuilder;
+import br.com.casadocodigo.cdi.modelo.CalculadoraDeImpostos;
 import br.com.casadocodigo.cdi.modelo.Funcionario;
 
 @WebServlet("/hello-cdi")
@@ -33,6 +34,7 @@ public class IniciandoComCDI extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("Iniciando o Calculo do Imposto do Funcionario");
+		
 		
 		Double salario = Double.parseDouble(req.getParameter("salario"));
 		Funcionario funcionario = new FuncionarioBuilder().comSalario(salario).build();
