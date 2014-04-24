@@ -14,7 +14,7 @@ import br.com.casadocodigo.cdi.builder.FuncionarioBuilder;
 import br.com.casadocodigo.cdi.modelo.CalculadoraDeImpostos;
 import br.com.casadocodigo.cdi.modelo.Funcionario;
 
-@WebServlet("/hello-cdi")
+@WebServlet("/calculadora-impostos")
 public class IniciandoComCDI extends HttpServlet {
 
 	private static final long serialVersionUID = 1297552244523192638L;

@@ -1,14 +1,14 @@
 package br.com.casadocodigo.cdi.modelo;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.inject.Alternative;
+import javax.enterprise.inject.Specializes;
 
 import br.com.casadocodigo.cdi.qualifier.Calculadora;
 
-@Alternative @Calculadora
-public class CalculadoraDeSalarios2013 implements CalculadoraDeSalarios {
+@Calculadora @Specializes
+public class CalculadoraAssincronaDeSalarios2013 extends CalculadoraDeSalarios2013 {
 
-	public CalculadoraDeSalarios2013() {
+	public CalculadoraAssincronaDeSalarios2013() {
 		System.out.println("Iniciando a Calculadora de Salarios");
 	}
 
@@ -18,7 +18,6 @@ public class CalculadoraDeSalarios2013 implements CalculadoraDeSalarios {
 	}
 	
 	public void calcula() {
-		System.out.println("Calculando salarios de 2013");
+		System.out.println("Calculando assincronamente salarios de 2013");
 	}
-	
 }

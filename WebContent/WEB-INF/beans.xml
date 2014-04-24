@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
-	<alternatives>
-		<class>
-			br.com.casadocodigo.cdi.modelo.CalculadoraDeSalarios2013
-		</class>
-	</alternatives>
+	<alternative>
+		<class>br.com.casadocodigo.cdi.modelo.CalculadoraDeSalarios2013</class>
+	</alternative>	
 </beans>
